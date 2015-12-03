@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Briefcase</title>
+    <style>
+      body { font-family: monospace; font-size: 18px; padding: 1em; margin: 1em; }
+      div  { display: inline-block; padding: 1em; }
+    </style>
+    <script>
+      function createCases() {
+        var input = document.getElementById('input').value.replace(/\n/g, '<br>');
+        document.getElementById('lowercaseOutput').innerHTML = input.toLowerCase();
+        document.getElementById('uppercaseOutput').innerHTML = input.toUpperCase();
+        document.getElementById('input').value               = "";
+      }
+    </script>
+  </head>
+  <body>
+    <textarea id="input" placeholder="input"></textarea>
+    <button onclick="createCases()">create cases</button>
+    <br>
+    <div id="lowercaseOutput"></div>
+    <div id="uppercaseOutput"></div>
+  </body>
+</html>
